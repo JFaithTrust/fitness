@@ -32,8 +32,8 @@ body {
   .exercise-card {
     width: 400px;
     height: 445px;
-    background: #fff;
-    border-top: 4px solid #f8ff25;
+    background: #000;
+    border-top: 4px solid #FFBE0B;
     border-bottom-left-radius: 20px;
     text-decoration: none;
     display: flex;
@@ -43,9 +43,19 @@ body {
     transform: scale(1, 1);
     transition: 0.3s all ease-in-out;
   }
-  
+
+  .exercise-card:hover{
+    box-shadow: -1px 17px 17px 4px rgba(194,183,183,0.78);
+    border-radius: 20px;
+  }
+
   .exercise-card img {
     height: 326px;
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  .exercise-card img:hover{
+    border-radius: 20px;
   }
   
   .bodyPart-card {
@@ -59,8 +69,9 @@ body {
   }
   
   .search-btn:hover {
-    color: #f8ff25 !important;
-    border: 1px solid #f8ff25 !important;
+    border-radius: 10px;
+    color: #FFBE0B !important;
+    border: 3px solid #FFBE0B !important;
   }
   
   .exercise-video {
@@ -99,3 +110,26 @@ body {
       width: 280px;
     }
   }
+
+/* 
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */

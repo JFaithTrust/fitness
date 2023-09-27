@@ -1,5 +1,5 @@
 import "./App.css";
-import { Home } from "./pages";
+import { Home, ExerciseDetail } from "./pages";
 import { Route, Routes } from "react-router-dom";
 import { Navbar } from "./components";
 import { Box } from "@mui/material";
@@ -10,6 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/exercisedetail/:id" element={<ExerciseDetail />} />
       </Routes>
     </Box>
   );
