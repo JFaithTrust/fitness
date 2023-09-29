@@ -46,7 +46,7 @@ body {
 
   .exercise-card:hover{
     box-shadow: -1px 17px 17px 4px rgba(194,183,183,0.78);
-    border-radius: 20px;
+    border-radius: 20px !important;
   }
 
   .exercise-card img {
@@ -111,25 +111,3 @@ body {
     }
   }
 
-/* 
-  .swiper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
