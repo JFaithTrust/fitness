@@ -1,12 +1,12 @@
 import React from "react";
 import { Typography, Box, Stack } from "@mui/material";
 
-import HorizontalCards from "./HorizontalCards";
+import HorizontalExerciseCard from "./HorizontalExerciseCard";
 import Loader from "./Loader";
 
 const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
   return (
-    <Box sx={{ mt: { lg: "100px", xs: "0px" } }}>
+    <Box sx={{ mt: { lg: "100px", xs: "0px" } }} id="exercises">
       <Typography
         color="#FBFAF3"
         sx={{ fontSize: { lg: "44px", xs: "25px" }, ml: "20px" }}
@@ -21,7 +21,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
       </Typography>
       <Stack direction="row" sx={{ p: 2, position: "relative" }}>
         {targetMuscleExercises.length !== 0 ? (
-          <HorizontalCards data={targetMuscleExercises} />
+          <HorizontalExerciseCard data={targetMuscleExercises} />
         ) : (
           <Loader />
         )}
@@ -44,7 +44,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
       </Typography>
       <Stack direction="row" sx={{ p: 2, position: "relative" }}>
         {equipmentExercises.length !== 0 ? (
-          <HorizontalCards data={equipmentExercises} />
+          <HorizontalExerciseCard data={equipmentExercises} />
         ) : (
           <Loader />
         )}

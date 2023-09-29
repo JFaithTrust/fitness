@@ -46,7 +46,7 @@ body {
 
   .exercise-card:hover{
     box-shadow: -1px 17px 17px 4px rgba(194,183,183,0.78);
-    border-radius: 20px !important;
+    border-radius: 20px;
   }
 
   .exercise-card img {
@@ -57,10 +57,18 @@ body {
   .exercise-card img:hover{
     border-radius: 20px;
   }
+
+  .exercise-card:hover img{
+    border-radius: 20px;
+  }
   
   .bodyPart-card {
     transform: scale(1, 1);
     transition: 0.3s all ease-in-out;
+  }
+
+  .swiper-pagination-bullet{
+    margin-top: 20px;
   }
   
   .exercise-card:hover,

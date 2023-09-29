@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button, Stack, Typography } from "@mui/material";
 
-const ExerciseCard = ({ exercise }) => {
+const ExerciseCard = ({ exercise, height, noneStyle }) => {
   return (
-    <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
-      <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" />
+    <Link className="exercise-card" to={`/exercisedetail/${exercise.id}`} style={{ boxShadow: noneStyle, transform: noneStyle}}>
+      <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" style={{ height: height }} />
       <Stack direction="row" mt={2}>
         <Button
           color="warning"
@@ -35,9 +35,9 @@ const ExerciseCard = ({ exercise }) => {
         ml="21px"
         color="#FBFAF3"
         fontWeight="bold"
-        sx={{ fontSize: { lg: "24px", xs: "20px" } }}
+        sx={{ fontSize: { lg: "20px", xs: "16px" } }}
         mt="11px"
-        pb="10px"
+        pb="20px"
         textTransform="capitalize"
       >
         {exercise.name}

@@ -9,3 +9,4 @@ export { default as Loader } from "./Loader";
 export { default as Detail } from "./Detail";
 export { default as SimilarExercises } from "./SimilarExercises";
 export { default as ExerciseVideos } from "./ExerciseVideos";
+export { default as HorizontalExerciseCard } from './HorizontalExerciseCard'

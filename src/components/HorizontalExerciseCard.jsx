@@ -8,14 +8,15 @@ import { Pagination, Keyboard, Autoplay } from "swiper/modules";
 
 import { ExerciseCard, BodyPart } from "../components";
 
-const HorizontalCards = ({ data, bodyParts, setBodyPart, bodyPart }) => {
+const HorizontalExerciseCard = ({ data, bodyParts, setBodyPart, bodyPart }) => {
   return (
     <div style={{ width: "1280px", margin: "auto" }}>
       <Swiper
         keyboard={{ enabled: true }}
-        slidesPerView={5}
+        slidesPerView={3}
         spaceBetween={20}
         pagination={{
+          dynamicBullets: true,
           clickable: true,
         }}
         autoplay={{
@@ -28,6 +29,7 @@ const HorizontalCards = ({ data, bodyParts, setBodyPart, bodyPart }) => {
           "--swiper-pagination-bullet-inactive-opacity": "1",
           "--swiper-pagination-bullet-size": "12px",
           "--swiper-pagination-bullet-horizontal-gap": "6px",
+          "--swiper-pagination-bullet-vertical-gap" : "20px"
         }}
         modules={[Pagination, Keyboard, Autoplay]}
         className="mySwiper"
@@ -41,7 +43,7 @@ const HorizontalCards = ({ data, bodyParts, setBodyPart, bodyPart }) => {
                 bodyPart={bodyPart}
               />
             ) : (
-              <ExerciseCard exercise={item} />
+              <ExerciseCard exercise={item} height = {'250px'} noneStyle={'none'} />
             )}
           </SwiperSlide>
         ))}
@@ -50,4 +52,4 @@ const HorizontalCards = ({ data, bodyParts, setBodyPart, bodyPart }) => {
   );
 };
 
-export default HorizontalCards;
+export default HorizontalExerciseCard;
